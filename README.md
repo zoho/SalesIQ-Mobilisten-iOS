@@ -4,10 +4,12 @@ Mobilisten iOS SDK
 Power up your mobile app with Mobilisten.
 
 ## Changelog
-Swift 5.1 Public Framework.
+Swift 5.0 Public Framework.
+Removed Bluetooth Permission.
+UI Refinements
 
 ## Installation
-The Mobilisten SalesIQ iOS SDK can be integrated with your application by adding the following to your podfile:
+The Mobilisten SalesIQ iOS SDK can be integrated with your application via cocaopods by adding the following to your podfile:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -15,7 +17,7 @@ platform :ios, '9.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'MobilistenBeta', '1.06'
+  pod 'Mobilisten', '1.1.0'
 end
 ```
 
