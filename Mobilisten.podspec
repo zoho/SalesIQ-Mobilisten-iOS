@@ -3,6 +3,7 @@ spec.name             = "Mobilisten"
 spec.version          = "1.1.0"
 spec.summary          = "Mobilisten iOS SDK"
 spec.license          = { :type => "MIT", :text=> <<-LICENSE
+
 MIT License
 
 Copyright (c) 2018 Zoho Corporation
