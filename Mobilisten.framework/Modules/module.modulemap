@@ -1,0 +1,11 @@
+framework module Mobilisten {
+  umbrella header "Mobilisten.h"
+
+  export *
+  module * { export * }
+}
+
+module Mobilisten.Swift {
+    header "Mobilisten-Swift.h"
+    requires objc
+}
