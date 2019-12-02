@@ -27,7 +27,7 @@
 @property NSString *sid;
 @property NSString *xa;
 @property SRWebSocket *websocket;
-@property id <UTSConnectionHandler> PexConnectionHandlerdelegate;
+@property(nonatomic, weak) id <UTSConnectionHandler> PexConnectionHandlerdelegate;
 //- (void)initWithURL:(NSString *)theUrl andEmbedName:(NSString *)embedName ScreenName:(NSString *)screenName;
 - (void)initWithApiKey:(NSString *)apiKey andAccessKey:(NSString *)accessKey bundleId:(NSString *)bundle domain:(NSString *)dom andtheHeader:(NSDictionary *)theHeader;
 //- (void)process:(LDPEXEvent *)evt andEventHandler:(id)eventHandler;
