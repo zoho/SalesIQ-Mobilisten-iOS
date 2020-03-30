@@ -4,7 +4,7 @@ Mobilisten iOS SDK
 Power up your mobile app with Mobilisten.
 
 ## Changelog
-Built using swift 5.2
+Bug fix for email transcript not working when both FAQ and conversation is off. Built using Swift 5.1.2.
 ## Installation
 The Mobilisten SalesIQ iOS SDK can be integrated with your application by adding the following to your podfile:
 
@@ -14,7 +14,7 @@ platform :ios, '9.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '1.1.3'
+  pod 'Mobilisten', '1.1.4'
 end
 ```
 
