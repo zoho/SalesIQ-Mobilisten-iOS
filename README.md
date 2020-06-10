@@ -14,7 +14,7 @@ platform :ios, '9.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '3.0.1'
+  pod 'Mobilisten', '3.0.2'
 end
 ```
 
@@ -29,7 +29,7 @@ You can find our manual integration guide [here](https://www.zoho.com/salesiq/he
 **Mobilisten** comes with a set of highly configurable APIs to suit your needs. Get started by creating an `App` and `Access` key for the Mobilisten SDK in SalesIQ
 
 ## API Documentation
-You can find the list of all APIs and their documentation [here](https://www.zoho.com/salesiq/help/developer-section/react-native-sdk-installation.html) in the **API Reference** section.
+You can find the list of all APIs and their documentation [here](https://www.zoho.com/salesiq/help/developer-section/ios-sdk-event-delegate.html) in the **API Reference** section.
 
 ## Demo Application
 
