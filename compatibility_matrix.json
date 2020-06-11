@@ -1,17 +1,27 @@
 {
-  "mobilisten-ios-version-main": "3.0.2",
-  "mobilisten-compatibility-matrix": [
+  "mobilisten_ios_version_main": "3.0.2",
+  "sdk_compatibility_matrix": [
     {
-      "xcode": "11.1",
-      "version": "3.0.0"
+      "xcode_version": "11.1",
+      "mobilisten_version": "3.0.0"
     },
     {
-      "xcode": "11.2.1/11.3.1",
-      "version": "3.0.1"
+      "xcode_version": "11.2.1/11.3.1",
+      "mobilisten_version": "3.0.1"
     },
     {
-      "xcode": "11.4.1 and above",
-      "version": "3.0.2"
+      "xcode_version": "11.4 and above",
+      "mobilisten_version": "3.0.2"
+    }
+  ],
+  "table_columns": [
+    {
+      "id": "xcode_version",
+      "title": "Xcode Version"
+    },
+    {
+      "id": "mobilisten_version",
+      "title": "Mobilisten Version"
     }
   ]
 }
