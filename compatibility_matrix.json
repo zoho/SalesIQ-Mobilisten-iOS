@@ -8,7 +8,11 @@
         "Mobilisten Version": "3.0.1"
     },
     {
-        "Xcode Version": "11.4 and above",
+        "Xcode Version": "11.4",
+        "Mobilisten Version": "3.0.2"
+    },
+    {
+        "Xcode Version": "11.4+",
         "Mobilisten Version": "3.0.2"
     }
 ]
