@@ -14,7 +14,7 @@ platform :ios, '9.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '3.1.1'
+  pod 'Mobilisten', '3.1.2'
 end
 ```
 
