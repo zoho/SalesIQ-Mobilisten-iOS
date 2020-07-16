@@ -1,3 +1,9 @@
+</br>
+[![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)](https://cocoapods.org/pods/Mobilisten)
+[![SupportedLanguages](https://img.shields.io/badge/languages-Swift%20%7C%20%20ObjectiveC-green.svg)](https://www.zoho.com/salesiq/help/developer-section/ios-mobile-sdk-installation.html)
+[![Version](https://img.shields.io/badge/version-3.1.2-blue.svg)](https://cocoapods.org/pods/Mobilisten)
+
+
 # SalesIQ Mobilisten  iOS SDK 3.1
 
 Connect with customers at every step of their journey. Give them the best in-app live chat experience with Mobilisten. Mobilisten enables customers to reach you from any screen on your app, get their questions answered, and make better purchase decisions.  
