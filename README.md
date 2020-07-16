@@ -1,6 +1,8 @@
 </br>
 [![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)](https://cocoapods.org/pods/Mobilisten)
+
 [![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)](https://cocoapods.org/pods/Mobilisten)
+
 [![Version](https://img.shields.io/badge/version-3.1.0-blue.svg)](https://cocoapods.org/pods/Mobilisten)
 
 # SalesIQ Mobilisten  iOS SDK 3.1
