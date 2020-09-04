@@ -1,8 +1,8 @@
 [![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)](https://cocoapods.org/pods/Mobilisten)
 [![SupportedLanguages](https://img.shields.io/badge/languages-Swift%20%7C%20%20ObjectiveC-green.svg)](https://www.zoho.com/salesiq/help/developer-section/ios-mobile-sdk-installation.html)
-[![Version](https://img.shields.io/badge/version-3.3.2-blue.svg)](https://cocoapods.org/pods/Mobilisten)
+[![Version](https://img.shields.io/badge/version-3.4.0-blue.svg)](https://cocoapods.org/pods/Mobilisten)
 
-# SalesIQ Mobilisten  iOS SDK 3.3
+# SalesIQ Mobilisten  iOS SDK 3.4
 
 Connect with customers at every step of their journey. Give them the best in-app live chat experience with Mobilisten. Mobilisten enables customers to reach you from any screen on your app, get their questions answered, and make better purchase decisions.  
 
@@ -18,7 +18,7 @@ platform :ios, '9.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '3.3.2'
+  pod 'Mobilisten', '3.4.0'
 end
 ```
 
@@ -36,6 +36,5 @@ You can find our manual integration guide [here](https://www.zoho.com/salesiq/he
 You can find the list of all APIs and their documentation [here](https://www.zoho.com/salesiq/help/developer-section/ios-sdk-event-delegate.html) in the **API Reference** section.
 
 ## Demo Application
-
 Download our demo app from the [Apple App Store](http://itunes.apple.com/us/app/mobilisten-by-zoho-salesiq/id1456241226) today!
 
