@@ -1,7 +1,7 @@
 [![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)](https://cocoapods.org/pods/Mobilisten)
 [![SupportedLanguages](https://img.shields.io/badge/languages-Swift%20%7C%20%20ObjectiveC-green.svg)](https://www.zoho.com/salesiq/help/developer-section/ios-mobile-sdk-installation.html)
 [![Version](https://img.shields.io/badge/version-3.4.2-blue.svg)](https://cocoapods.org/pods/Mobilisten)
-![Cocoapods CI](https://github.com/zoho/SalesIQ-Mobilisten-iOS/workflows/Cocoapods%20CI/badge.svg)
+[![Cocoapods CDI](https://github.com/zoho/SalesIQ-Mobilisten-iOS/workflows/Cocoapods%20CD/badge.svg)](https://github.com/zoho/SalesIQ-Mobilisten-iOS/actions?query=workflow%3A%22Cocoapods+CD%22)
 
 # SalesIQ Mobilisten  iOS SDK 3.4
 
