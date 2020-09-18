@@ -6,8 +6,8 @@ name: Cocoapods CD
 # events but only for the master branch
 on:
   push:
-    branches:
-    - master
+    tags:
+    - 'v*'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,15 +25,15 @@ jobs:
         run: gem install cocoapods
 
       # Runs a single command using the runners shell
-      - name: Linting Podspec
+      - name: Validating Podspec
         run: |
           set -eo pipefail
           pod spec lint Mobilisten.podspec
 
       # Runs a set of commands using the runners shell
-#       - name: Push to Cocoapods Trunk
-#         env:
-#           COCOAPODS_TRUNK_TOKEN: ${{ secrets.SALESIQ_MOBILISTEN_IOS_COCOAPODS_TRUNK_TOKEN }}
-#         run: |
-#           set -eo pipefail
-#           pod trunk push Mobilisten.podspec
+       - name: Pushing to Cocoapods
+         env:
+           COCOAPODS_TRUNK_TOKEN: ${{ secrets.SALESIQ_MOBILISTEN_IOS_COCOAPODS_TRUNK_TOKEN }}
+         run: |
+           set -eo pipefail
+           pod trunk push Mobilisten.podspec
