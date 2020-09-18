@@ -24,12 +24,6 @@ jobs:
       - name: Installing Cocoapods
         run: gem install cocoapods
 
-      # Validate Mobilisten.podspec
-      - name: Validating Podspec
-        run: |
-          set -eo pipefail
-          pod spec lint Mobilisten.podspec
-
       # Start Push to Cocoapods
       - name: Pushing to Cocoapods
         env:
