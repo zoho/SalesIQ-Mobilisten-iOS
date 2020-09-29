@@ -36,6 +36,3 @@ You can find our manual integration guide [here](https://www.zoho.com/salesiq/he
 ## API Documentation
 You can find the list of all APIs and their documentation [here](https://www.zoho.com/salesiq/help/developer-section/ios-sdk-event-delegate.html) in the **API Reference** section.
 
-## Demo Application
-Download our demo app from the [Apple App Store](http://itunes.apple.com/us/app/mobilisten-by-zoho-salesiq/id1456241226) today!
-
