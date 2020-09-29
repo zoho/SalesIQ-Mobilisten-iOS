@@ -23,6 +23,14 @@ jobs:
       
       - name: Installing Cocoapods
         run: gem install cocoapods
+        
+      # Validate Podspec
+      - name: Validating Mobilisten Podspec
+        env:
+         COCOAPODS_TRUNK_TOKEN: ${{ secrets.SALESIQ_MOBILISTEN_IOS_COCOAPODS_TRUNK_TOKEN }}
+        run: |
+         set -eo pipefail
+         pod spec lint Mobilisten.podspec
 
       # Start Push to Cocoapods
       - name: Pushing to Cocoapods
