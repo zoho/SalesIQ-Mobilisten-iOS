@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/badge/version-3.5.1-blue.svg)](https://cocoapods.org/pods/Mobilisten)
 [![Cocoapods CDI](https://github.com/zoho/SalesIQ-Mobilisten-iOS/workflows/Cocoapods%20CD/badge.svg)](https://github.com/zoho/SalesIQ-Mobilisten-iOS/actions?query=workflow%3A%22Cocoapods+CD%22)
 
-# SalesIQ Mobilisten  iOS SDK 3.5
+# SalesIQ Mobilisten  iOS SDK 3.6
 
 Connect with customers at every step of their journey. Give them the best in-app live chat experience with Mobilisten. Mobilisten enables customers to reach you from any screen on your app, get their questions answered, and make better purchase decisions.  
 
@@ -19,7 +19,7 @@ platform :ios, '9.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '3.5.1'
+  pod 'Mobilisten', '3.6.0'
 end
 ```
 
