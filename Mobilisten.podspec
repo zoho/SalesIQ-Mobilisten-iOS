@@ -31,4 +31,7 @@ spec.ios.vendored_frameworks = 'Mobilisten.framework'
 spec.social_media_url = "http://zoho.com"
 spec.ios.deployment_target = '9.0'
 spec.requires_arc = true
+spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+}
 end
