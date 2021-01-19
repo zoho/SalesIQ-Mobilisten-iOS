@@ -11,7 +11,7 @@ Connect with customers at every step of their journey. Give them the best in-app
 ## Installation using Cocoapods
 
 You can integrate Mobilisten in your application using [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) using the Mobilisten pod.
-Here is an example Podfile where Mobilisten is included.
+Here is an example Podfile where Mobilisten is included. 
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
