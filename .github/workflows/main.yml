@@ -30,7 +30,7 @@ jobs:
          COCOAPODS_TRUNK_TOKEN: ${{ secrets.SALESIQ_MOBILISTEN_IOS_COCOAPODS_TRUNK_TOKEN }}
         run: |
          set -eo pipefail
-         pod spec lint Mobilisten.podspec
+         pod spec lint Mobilisten.podspec --allow-warnings
 
       # Start Push to Cocoapods
       - name: Pushing to Cocoapods
