@@ -4,6 +4,7 @@ import PackageDescription
 let version = "3.6.3"
 let package = Package(
     name: "Mobilisten",
+    platforms: [.iOS(.v10)],
     products: [
         .library(
             name: "Mobilisten",
