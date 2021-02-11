@@ -11,8 +11,6 @@ let package = Package(
             targets: ["Mobilisten"]),
     ],
     targets: [
-        .binaryTarget(
-            name: "Mobilisten",
-            url: "https://raw.githubusercontent.com/zoho/SalesIQ-Mobilisten-iOS/v\(version)/Mobilisten.zip", checksum: "981bd2ea97dafef8abc80c37f65f99687896286ff4546bb09c4cbf60cf9cddbe")
+        .binaryTarget(name: "Mobilisten", path: "Mobilisten.zip")
     ]
 )
