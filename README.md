@@ -25,9 +25,14 @@ end
 
 After **Mobilisten** is added to your Podfile, run the `pod install` command to complete the Installation.
 
+## Swift Package Manager
+
+You can now integrate Mobilisten with your app using SPM 🎉 [Learn More](https://github.com/zoho/SalesIQ-Mobilisten-iOS-SP)
+
 ## Manual Installation
 
 You can find our manual integration guide [here](https://www.zoho.com/salesiq/help/developer-section/ios-mobile-sdk-installation.html)
+
 
 ## Getting Started
 
