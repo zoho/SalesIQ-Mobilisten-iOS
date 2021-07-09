@@ -47,5 +47,5 @@ ZohoSalesIQ.initWithAppKey("app_key", accessKey: "access_key") { _ in
 ```
 
 ## API Documentation
-You can find the list of all APIs and their documentation [here](https://www.zoho.com/salesiq/help/developer-section/ios-sdk-event-delegate.html) under the **API Reference** section.
+You can find the list of all APIs and their documentation [here](https://www.zoho.com/salesiq/help/developer-section/ios-sdk-event-delegate-v3.html) under the **API Reference** section.
 
