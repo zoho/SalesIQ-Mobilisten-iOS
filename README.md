@@ -25,7 +25,7 @@ end
 
 After **Mobilisten** is added to your Podfile, run the `pod install` command to complete the Installation.
 
-## Swift Package Manager
+## Installation using Swift Package Manager
 
 You can now integrate Mobilisten with your app using SPM 🎉  [Learn More](https://github.com/zoho/SalesIQ-Mobilisten-iOS-SP)
 
@@ -36,7 +36,7 @@ You can find our manual integration guide [here](https://www.zoho.com/salesiq/he
 
 ## Getting Started
 
-Mobilisten comes with a set of highly configurable APIs to suit your needs. Get started by creating an `App` and `Access` keys for the Mobilisten SDK for your application's bundle ID from the Zoho SalesIQ console.
+Mobilisten comes with a set of highly configurable APIs to suit your needs. Register your app's Bundle ID via the SalesIQ Console to generate the `App` and `Access` keys for Mobilisten.
 
 ## Initializing Mobilisten
 Use the `ZohoSalesIQ.initWithAppKey(:accessKey:completion:)` API to initialize Mobilisten.
