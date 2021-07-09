@@ -15,7 +15,7 @@ Here is an example Podfile where Mobilisten is included.
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'Project Target' do
   use_frameworks!
@@ -36,8 +36,16 @@ You can find our manual integration guide [here](https://www.zoho.com/salesiq/he
 
 ## Getting Started
 
-**Mobilisten** comes with a set of highly configurable APIs to suit your needs. Get started by creating an `App` and `Access` key for the Mobilisten SDK in SalesIQ
+Mobilisten comes with a set of highly configurable APIs to suit your needs. Get started by creating an `App` and `Access` keys for the Mobilisten SDK for your application's bundle ID from the Zoho SalesIQ console.
+
+## Initializing Mobilisten
+Use the `ZohoSalesIQ.initWithAppKey(:accessKey:completion:)` API to initialize Mobilisten.
+```swift
+ZohoSalesIQ.initWithAppKey("app_key", accessKey: "access_key") { _ in
+    // your code goes here
+}
+```
 
 ## API Documentation
-You can find the list of all APIs and their documentation [here](https://www.zoho.com/salesiq/help/developer-section/ios-sdk-event-delegate.html) in the **API Reference** section.
+You can find the list of all APIs and their documentation [here](https://www.zoho.com/salesiq/help/developer-section/ios-sdk-event-delegate.html) under the **API Reference** section.
 
