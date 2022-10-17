@@ -30,4 +30,4 @@ jobs:
          COCOAPODS_TRUNK_TOKEN: ${{ secrets.SALESIQ_MOBILISTEN_IOS_COCOAPODS_TRUNK_TOKEN }}
         run: |
          set -eo pipefail
-         pod trunk push Mobilisten.podspec
+         pod trunk push Mobilisten.podspec --verbose
