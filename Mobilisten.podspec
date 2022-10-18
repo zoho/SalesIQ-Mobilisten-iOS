@@ -29,7 +29,6 @@ spec.source = { :http => "https://raw.githubusercontent.com/zoho/SalesIQ-Mobilis
 spec.source_files = 'Mobilisten.xcframework/*/Mobilisten.framework/Headers/*.{h,m,swift}'
 spec.ios.vendored_frameworks = 'Mobilisten.xcframework'
 spec.social_media_url = "http://zoho.com"
-spec.ios.deployment_target = '10.0'
-spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+spec.ios.deployment_target = '11.0'
 spec.requires_arc = true
 end
