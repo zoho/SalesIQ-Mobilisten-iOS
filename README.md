@@ -1,9 +1,9 @@
 [![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)](https://cocoapods.org/pods/Mobilisten)
 [![SupportedLanguages](https://img.shields.io/badge/languages-Swift%20%7C%20%20ObjectiveC-green.svg)](https://www.zoho.com/salesiq/help/developer-section/ios-mobile-sdk-installation.html)
-[![Version](https://img.shields.io/badge/version-4.2.9-blue.svg)](https://cocoapods.org/pods/Mobilisten)
+[![Version](https://img.shields.io/badge/version-4.2.10-blue.svg)](https://cocoapods.org/pods/Mobilisten)
 [![Cocoapods CDI](https://github.com/zoho/SalesIQ-Mobilisten-iOS/workflows/Cocoapods%20CD/badge.svg)](https://github.com/zoho/SalesIQ-Mobilisten-iOS/actions?query=workflow%3A%22Cocoapods+CD%22)
 
-# SalesIQ Mobilisten  iOS SDK 4.2.9
+# SalesIQ Mobilisten  iOS SDK 4.2.10
 
 Connect with customers at every step of their journey. Give them the best in-app live chat experience with Mobilisten. Mobilisten enables customers to reach you from any screen on your app, get their questions answered, and make better purchase decisions.  
 
@@ -15,11 +15,11 @@ Here is an example Podfile where Mobilisten is included.
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '4.2.9'
+  pod 'Mobilisten', '4.2.10'
 end
 ```
 
