@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 spec.name             = "Mobilisten"
-spec.version          = "5.4.1"
+spec.version          = "6.0.0"
 spec.summary          = "Mobilisten iOS SDK"
 spec.license          = { :type => "MIT", :text=> <<-LICENSE
 MIT License
@@ -31,4 +31,5 @@ spec.ios.vendored_frameworks = 'Mobilisten.xcframework'
 spec.social_media_url = "http://zoho.com"
 spec.ios.deployment_target = '11.0'
 spec.requires_arc = true
+spec.readme = "https://raw.githubusercontent.com/zoho/SalesIQ-Mobilisten-iOS/v#{spec.version}/README.md"
 end
