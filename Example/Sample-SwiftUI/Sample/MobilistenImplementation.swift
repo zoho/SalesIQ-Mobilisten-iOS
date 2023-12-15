@@ -40,7 +40,11 @@ class MobilistenImplementation {
     
     
     class func showLauncher(_ status: Bool) {
-        ZohoSalesIQ.showLauncher(status)
+        if status {
+            ZohoSalesIQ.Launcher.show(.always)
+        } else {
+            ZohoSalesIQ.Launcher.show(.never)
+        }
     }
     
     /**

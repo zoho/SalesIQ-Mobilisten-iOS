@@ -116,7 +116,11 @@ class MainViewController: UIViewController {
      */
     @objc func showLauncherAction(_ segmentedControl: UISegmentedControl) {
         let show = segmentedControl.selectedSegmentIndex == 0 ? true : false
-        ZohoSalesIQ.showLauncher(show)
+        if show {
+            ZohoSalesIQ.Launcher.show(.always)
+        } else {
+            ZohoSalesIQ.Launcher.show(.never)
+        }
     }
     
     /**

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let accessKey = "<#Enter Access key#>"
         
         ZohoSalesIQ.initWithAppKey(appKey, accessKey: accessKey)
-        ZohoSalesIQ.showLauncher(true)
+        ZohoSalesIQ.Launcher.show(.always)
         ZohoSalesIQ.Chat.setVisibility(.attenderImageOnLauncher, visible: true)
         ZohoSalesIQ.delegate = self
         ZohoSalesIQ.Chat.delegate = self
