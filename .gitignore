@@ -2,7 +2,6 @@
 xcuserdata/
 *.swiftpm*
 .build/
-*.zip
 Packages/
 Package.pins
 Package.resolved

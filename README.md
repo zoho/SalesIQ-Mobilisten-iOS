@@ -1,11 +1,11 @@
 [![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)](https://cocoapods.org/pods/Mobilisten)
 [![SupportedLanguages](https://img.shields.io/badge/languages-Swift%20%7C%20%20ObjectiveC-green.svg)](https://www.zoho.com/salesiq/help/developer-section/ios-mobile-sdk-installation.html)
-[![Version](https://img.shields.io/badge/version-9.3.1-blue.svg)](https://cocoapods.org/pods/Mobilisten)
+[![Version](https://img.shields.io/badge/version-10.0.0-blue.svg)](https://cocoapods.org/pods/Mobilisten)
 [![Cocoapods CDI](https://github.com/zoho/SalesIQ-Mobilisten-iOS/workflows/Cocoapods%20CD/badge.svg)](https://github.com/zoho/SalesIQ-Mobilisten-iOS/actions?query=workflow%3A%22Cocoapods+CD%22)
 
-# SalesIQ Mobilisten  iOS SDK 9.3.1
+# SalesIQ Mobilisten iOS SDK
 
-Connect with customers at every step of their journey. Give them the best in-app live chat experience with Mobilisten. Mobilisten enables customers to reach you from any screen on your app, get their questions answered, and make better purchase decisions.  
+Connect with customers at every step of their journey. Deliver the best in-app experience with Mobilisten’s live chat and voice call support. Mobilisten makes it easy for customers to reach you from any screen within your app, get their questions answered instantly, and make confident, informed decisions.  
 
 
 ## Installation using Cocoapods
@@ -19,9 +19,14 @@ platform :ios, '13.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '9.3.1'
+  pod 'Mobilisten', '10.0.0'
+  # Only if using audio call support
+  pod 'MobilistenCalls', '1.0.0'
 end
 ```
+
+> Note: When using "pod MobilistenCalls", it is mandatory to add "pod Mobilisten".  
+
 
 After **Mobilisten** is added to your Podfile, run the `pod install` command to complete the Installation.
 
@@ -29,9 +34,7 @@ After **Mobilisten** is added to your Podfile, run the `pod install` command to 
 
 You can now integrate Mobilisten with your app using SPM 🎉  [Learn More](https://github.com/zoho/SalesIQ-Mobilisten-iOS-SP)
 
-## Manual Installation
-
-You can find our manual integration guide [here](https://www.zoho.com/salesiq/help/developer-section/ios-mobile-sdk-installation.html)
+You can now integrate Mobilisten Calls with your app using SPM 🎉  [Learn More](https://github.com/zoho/SalesIQ-Mobilisten-Calls-iOS-SP)
 
 
 ## Getting Started
@@ -41,11 +44,18 @@ Mobilisten comes with a set of highly configurable APIs to suit your needs. Regi
 ## Initializing Mobilisten
 Use the `ZohoSalesIQ.initWithAppKey(:accessKey:completion:)` API to initialize Mobilisten.
 ```swift
-ZohoSalesIQ.initWithAppKey("app_key", accessKey: "access_key") { error in
+import Mobilisten
+import MobilistenCalls // Only if using audio call support
+
+// Initialize MobilistenCalls (only if you're using it)
+ZohoSalesIQCalls.initialise() 
+
+// Initialize Mobilisten SDK
+ZohoSalesIQ.initWithAppKey("YOUR_APP_KEY", accessKey: "YOUR_ACCESS_KEY") { error in
     if error == nil {
-       // Initialization successful
+        print("Mobilisten initialized successfully.")
     } else {
-      // Initialization failed, handle error
+        print("Initialization failed: \(error?.message)")
     }
 }
 ```
