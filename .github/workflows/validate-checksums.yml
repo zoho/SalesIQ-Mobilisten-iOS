@@ -1,0 +1,84 @@
+name: Validate Framework Checksums
+
+# This workflow validates that framework checksums are consistent
+# between repository files and release assets to prevent SPM issues
+on:
+  push:
+    tags:
+      - 'v*'
+  pull_request:
+    paths:
+      - 'Frameworks/**'
+  workflow_dispatch:
+
+jobs:
+  validate-checksums:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Calculate local framework checksums
+        id: local-checksums
+        run: |
+          echo "## Local Framework Checksums" >> $GITHUB_STEP_SUMMARY
+          echo "| Framework | Checksum |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----------|----------|" >> $GITHUB_STEP_SUMMARY
+          
+          for file in Frameworks/*.zip; do
+            if [ -f "$file" ]; then
+              checksum=$(shasum -a 256 "$file" | cut -d' ' -f1)
+              basename_file=$(basename "$file")
+              echo "| $basename_file | \`$checksum\` |" >> $GITHUB_STEP_SUMMARY
+              echo "${basename_file}_checksum=$checksum" >> $GITHUB_OUTPUT
+            fi
+          done
+          
+      - name: Validate against latest release (if tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          echo "## Validating against release $TAG_NAME" >> $GITHUB_STEP_SUMMARY
+          
+          # Check if release exists and get asset checksum
+          RELEASE_URL="https://github.com/zoho/SalesIQ-Mobilisten-iOS/releases/download/$TAG_NAME/Mobilisten.zip"
+          
+          # Download release asset
+          if curl -L -f -o /tmp/release_mobilisten.zip "$RELEASE_URL" 2>/dev/null; then
+            RELEASE_CHECKSUM=$(shasum -a 256 /tmp/release_mobilisten.zip | cut -d' ' -f1)
+            LOCAL_CHECKSUM=$(shasum -a 256 Frameworks/Mobilisten.zip | cut -d' ' -f1)
+            
+            echo "| Source | Checksum |" >> $GITHUB_STEP_SUMMARY
+            echo "|--------|----------|" >> $GITHUB_STEP_SUMMARY
+            echo "| Local Repository | \`$LOCAL_CHECKSUM\` |" >> $GITHUB_STEP_SUMMARY
+            echo "| Release Asset | \`$RELEASE_CHECKSUM\` |" >> $GITHUB_STEP_SUMMARY
+            
+            if [ "$LOCAL_CHECKSUM" = "$RELEASE_CHECKSUM" ]; then
+              echo "✅ **SUCCESS**: Local and release asset checksums match!" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "❌ **ERROR**: Checksum mismatch detected!" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "This will cause Swift Package Manager checksum errors." >> $GITHUB_STEP_SUMMARY
+              echo "Please ensure the local \`Frameworks/Mobilisten.zip\` matches the release asset." >> $GITHUB_STEP_SUMMARY
+              exit 1
+            fi
+          else
+            echo "⚠️ **WARNING**: Could not download release asset for validation" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      - name: Generate SPM checksums reference
+        run: |
+          echo "## Swift Package Manager Reference" >> $GITHUB_STEP_SUMMARY
+          echo "Copy these checksums to update the SPM Package.swift:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`swift" >> $GITHUB_STEP_SUMMARY
+          
+          for file in Frameworks/*.zip; do
+            if [ -f "$file" ]; then
+              checksum=$(shasum -a 256 "$file" | cut -d' ' -f1)
+              basename_file=$(basename "$file" .zip)
+              echo "// $basename_file checksum: $checksum" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+          
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
