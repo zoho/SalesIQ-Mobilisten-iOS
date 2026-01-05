@@ -34,6 +34,8 @@ After **Mobilisten** is added to your Podfile, run the `pod install` command to 
 
 You can now integrate Mobilisten and Mobilisten Calls with your app using SPM 🎉  [Learn More](https://github.com/zoho/SalesIQ-Mobilisten-iOS-SP)
 
+> Mobilisten iOS SDK **v10.3.0** now officially supports **Mac Catalyst**.
+
 
 ## Getting Started
 
