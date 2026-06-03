@@ -2,32 +2,35 @@
 
 name: Cocoapods CD
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     tags:
-    - 'Calls-*'
+      - 'Calls-*'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: macOS-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
+      - uses: actions/checkout@v4
+
       - name: Installing Cocoapods
         run: gem install cocoapods
-        
-      # Start Push to Cocoapods
+
+      - name: Normalize XCFramework permissions
+        run: |
+          find . -name "*.xcframework" -type d | while read xcframework; do
+            chmod -R u+rwX,go+rX "$xcframework"
+            find "$xcframework" -type d -exec chmod 755 {} \;
+            find "$xcframework" -type f -exec chmod 644 {} \;
+          done
+
+          find . -path "*.xcframework/**/*.framework/*" -type f | while read f; do
+            chmod u+w "$f" || true
+          done
+
       - name: Pushing to Cocoapods
         env:
-         COCOAPODS_TRUNK_TOKEN: ${{ secrets.SALESIQ_MOBILISTEN_IOS_COCOAPODS_TRUNK_TOKEN }}
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.SALESIQ_MOBILISTEN_IOS_COCOAPODS_TRUNK_TOKEN }}
         run: |
-         set -eo pipefail
-         pod trunk push MobilistenCalls.podspec
+          set -eo pipefail
+          pod trunk push MobilistenCalls.podspec --verbose
