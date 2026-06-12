@@ -21,7 +21,7 @@ target 'Project Target' do
   use_frameworks!
   pod 'Mobilisten', '11.0.0'
   # Only if using audio call support
-  pod 'MobilistenCalls', '1.2.5'
+  pod 'MobilistenCalls', '1.3.0'
 end
 ```
 
