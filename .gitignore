@@ -8,3 +8,5 @@ Package.resolved
 *.ipa
 *.dSYM.zip
 *.dSYM
+Frameworks/checksums.txt
+Frameworks/checksum.sh
