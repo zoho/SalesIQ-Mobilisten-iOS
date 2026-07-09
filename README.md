@@ -1,6 +1,6 @@
 [![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)](https://cocoapods.org/pods/Mobilisten)
 [![SupportedLanguages](https://img.shields.io/badge/languages-Swift%20%7C%20%20ObjectiveC-green.svg)](https://www.zoho.com/salesiq/help/developer-section/ios-mobile-sdk-installation.html)
-[![Version](https://img.shields.io/badge/version-11.0.2-blue.svg)](https://cocoapods.org/pods/Mobilisten)
+[![Version](https://img.shields.io/badge/version-11.0.3-blue.svg)](https://cocoapods.org/pods/Mobilisten)
 [![Cocoapods CDI](https://github.com/zoho/SalesIQ-Mobilisten-iOS/workflows/Cocoapods%20CD/badge.svg)](https://github.com/zoho/SalesIQ-Mobilisten-iOS/actions?query=workflow%3A%22Cocoapods+CD%22)
 
 # SalesIQ Mobilisten iOS SDK
@@ -19,9 +19,9 @@ platform :ios, '15.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '11.0.2'
+  pod 'Mobilisten', '11.0.3'
   # Only if using audio call support
-  pod 'MobilistenCalls', '1.3.2'
+  pod 'MobilistenCalls', '1.3.3'
 end
 ```
 
