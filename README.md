@@ -19,9 +19,9 @@ platform :ios, '15.0'
 
 target 'Project Target' do
   use_frameworks!
-  pod 'Mobilisten', '11.0.4'
+  pod 'Mobilisten', '10.4.9'
   # Only if using audio call support
-  pod 'MobilistenCalls', '1.3.4'
+  pod 'MobilistenCalls', '1.2.8'
 end
 ```
 
