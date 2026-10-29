@@ -1,7 +1,7 @@
-lib_version = "10.4.9"
+lib_version = "11.1.0"
 Pod::Spec.new do |spec|
 spec.name             = "MobilistenCalls"
-spec.version          = "1.2.8"
+spec.version          = "1.3.5"
 spec.summary          = "Mobilisten Calls iOS SDK"
 spec.license          = { :type => "MIT", :text=> <<-LICENSE
 MIT License
